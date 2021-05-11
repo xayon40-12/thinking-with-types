@@ -25,6 +25,7 @@ source-repository head
 library
   exposed-modules:
       Expr
+      HList
   other-modules:
       Paths_thinking_with_types
   hs-source-dirs:
