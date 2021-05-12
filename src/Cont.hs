@@ -18,7 +18,6 @@ instance Applicative Cont where
   fab <*> fa = cont $ unCont fa (unCont fab id)
 
 instance Monad Cont where
-  return = pure
   ma >>= amb = unCont ma amb
 
 withVersionNumber :: (Double -> r) -> r
