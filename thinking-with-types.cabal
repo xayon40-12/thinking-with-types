@@ -24,6 +24,8 @@ source-repository head
 
 library
   exposed-modules:
+      Cont
+      Cont.ContT
       Expr
       HList
   other-modules:
@@ -33,6 +35,7 @@ library
   ghc-options: -Wall
   build-depends:
       base >=4.7 && <5
+    , mtl
   default-language: Haskell2010
 
 executable thinking-with-types-exe
@@ -44,6 +47,7 @@ executable thinking-with-types-exe
   ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , mtl
     , thinking-with-types
   default-language: Haskell2010
 
@@ -57,5 +61,6 @@ test-suite thinking-with-types-test
   ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , mtl
     , thinking-with-types
   default-language: Haskell2010
